@@ -133,6 +133,15 @@ class Property<ValueType = AnyType> {
   }
 
   /**
+   * Notify observers of a new value.
+   *
+   * @param {*} value New value
+   */
+  notifyOfExternalUpdate(value: ValueType): void {
+    this.value.notifyOfExternalUpdate(value);
+  }
+
+  /**
    * Get the name of this property.
    *
    * @returns {String} The property name.
